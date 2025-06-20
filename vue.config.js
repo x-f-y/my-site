@@ -1,5 +1,7 @@
 // vue-cli的配置文件
 module.exports = {
+  // 配置publicPath主要是解决部署到github pages之后css和js文件404的问题
+  publicPath: process.env.NODE_ENV === "production" ? "/my-site/": "/",
   devServer: {
     proxy: {
       "/api": {
