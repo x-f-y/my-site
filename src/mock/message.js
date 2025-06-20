@@ -1,5 +1,9 @@
 import Mock from 'mockjs';
 import qs from 'querystring';
+import avatar1 from "@/assets/avatar1.jpg";
+import avatar2 from "@/assets/avatar2.jpg";
+import avatar3 from "@/assets/avatar3.jpg";
+import avatar4 from "@/assets/avatar4.jpg";
 
 Mock.mock("/api/message", 'post', {
   code: 0,
@@ -9,12 +13,7 @@ Mock.mock("/api/message", 'post', {
     nickname: "@cname",
     content: "@cparagraph(1, 10)",
     createDate: Date.now(),
-    "avatar|1": [
-      "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar6.jpg",
-      "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar4.jpg",
-      "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar8.jpg",
-      "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar2.jpg",
-    ],
+    "avatar|1": [avatar1, avatar2, avatar3, avatar4],
   }
 });
 
@@ -31,12 +30,7 @@ Mock.mock(/^\/api\/message\/?(\?.+)?$/, 'get', function(options){
           nickname: "@cname",
           content: "@cparagraph(1, 10)",
           createDate: Date.now(),
-          "avatar|1": [
-            "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar6.jpg",
-            "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar4.jpg",
-            "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar8.jpg",
-            "https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar2.jpg",
-          ],
+          "avatar|1": [avatar1, avatar2, avatar3, avatar4]
         }
       ]
     }
