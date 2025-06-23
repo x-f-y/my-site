@@ -1,10 +1,11 @@
 import Mock from 'mockjs';
+import myAvatar from '@/assets/myAvatar.jpg';
 
 Mock.mock('/api/setting', 'get', {
   code: 0,
   msg: '',
   data: {
-    avatar: "https://mdrs.yuanjin.tech/FgMwAPYq17So9nwVH44ltDHo7u3c",
+    avatar: myAvatar,
     siteTitle: "我的个人空间",
     github: "https://github.com/x-f-y",
     qq: "2632243159",
